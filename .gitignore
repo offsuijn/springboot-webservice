@@ -1,2 +1,7 @@
 # Project exclude paths
-/.gradle/
+.gradle
+.idea
+
+### Java ###
+# Compiled class file
+*.class
