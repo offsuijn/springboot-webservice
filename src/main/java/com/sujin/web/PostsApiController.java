@@ -5,6 +5,7 @@ import com.sujin.web.dto.PostsResponseDto;
 import com.sujin.web.dto.PostsSaveRequestDto;
 import com.sujin.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
@@ -29,4 +30,8 @@ public class PostsApiController {
         return postsService.findById(id);
     }
 
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id) {
+        return postsService.delete(id);
+    }
 }
