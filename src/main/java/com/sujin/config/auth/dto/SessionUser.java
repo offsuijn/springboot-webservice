@@ -3,10 +3,10 @@ package com.sujin.config.auth.dto;
 import com.sujin.domain.user.User;
 import lombok.Getter;
 
-import javax.persistence.Entity;
+import java.io.Serializable;
 
 @Getter
-public class SessionUser {
+public class SessionUser implements Serializable {
 
     private String name;
     private String email;
